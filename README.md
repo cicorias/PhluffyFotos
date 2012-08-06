@@ -37,4 +37,8 @@ The sample utilizes several technologies including [ASP.NET MVC 4](http://www.as
 	1. Open the **Web.config** file located in the **PhluffyFotos.Web** project and update the **DefaultConnection** connction string to reflect the connection string to the Windows Azure SQL Database you created in step 1.
 	1. Save the changes made to the file.
 
-4. Now create a SQL Azure database and update the **DataConnectionString** in **Web.config** from **PhluffyFotos.Web** project.
+4. Publish the **PhlufffyPhotos** Cloud Service project to the Windows Azure Cloud Service you created in Step 2.
+5. Publish the **PhluffuPhotos.Web** project to the Windows Azure Web Site you created in Step 1.
+
+### Detailed Instructions ###
+For a more detailed walk-through on how to perform each of the individual tasks required to get this sample working in Windows Azure, see the sample's [Getting Started document](https://github.com/WindowsAzure-Samples/PhluffyPhotos/blob/master/GettingStarted.md) in the repository containing the code for the sample. 
