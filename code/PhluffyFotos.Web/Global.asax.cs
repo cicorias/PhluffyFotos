@@ -130,6 +130,7 @@ namespace PhluffyFotos.Web
             private static void ApplicationStartUponFirstRequest()
             {
                 var userName = ConfigurationManager.AppSettings["DefaultAdminRoleUser"];
+                var userPass = ConfigurationManager.AppSettings["DefaultAdminRolePass"];
 
                 // We need to check if this is the first launch of the app and pre-create
                 // the admin role and the first user to be admin (still needs to register).
@@ -138,6 +139,13 @@ namespace PhluffyFotos.Web
                     Roles.CreateRole("Administrator");
                 }
 
+                // make sure the admin user exists
+                if (Membership.GetUser(userName) == null)
+                {
+                    Membership.CreateUser(userName, userPass);
+                }
+
+                // add the user to the admin role
                 if (!Roles.GetUsersInRole("Administrator").Any() && Membership.GetUser(userName) != null)
                 {
                     Roles.AddUserToRole(userName, "Administrator");

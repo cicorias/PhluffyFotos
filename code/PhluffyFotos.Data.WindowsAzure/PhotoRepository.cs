@@ -87,6 +87,8 @@
             // add the binary to blob storage
             var storage = this.storageAccount.CreateCloudBlobClient();
             var container = storage.GetContainerReference(photo.Owner.ToLowerInvariant());
+            container.CreateIfNotExist();
+            container.SetPermissions(new BlobContainerPermissions { PublicAccess = BlobContainerPublicAccessType.Blob });
             var blob = container.GetBlobReference(file);
 
             blob.Properties.ContentType = mimeType;

@@ -24,17 +24,14 @@ The sample utilizes several technologies including [ASP.NET MVC 4](http://www.as
 2. You also need a Windows Azure Storage account, for leveraging Queues, Table and Blob Storage. Once you have your Windows Azure subscription, follow the steps in [this article](https://www.windowsazure.com/en-us/develop/net/how-to-guides/blob-storage/) to create a storage account. Make note of the account name and Primary Acess Key.
 
 3. To update the solution with the values obtained previously, follow these steps:
-	1. Use the Windows Azure portal to create a Web site with a database
-	1. Use the Windows Azure portal to create a Cloud Service
-	1. Use the Windows Azure portal to create a Windows Azure Storage account
-	1. Start Visual Studio 2012 and open the solution included with this sample's download.
-	1. Open the **ServiceConfiguration.Cloud.cscfg** file located in the **PhluffyFotos** Cloud project.
-	1. Modify the **DataConnectionsString** and the Diagnostic Connection string (Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString) for the worker role to point to the storage account you've just created.
+	1. Start Visual Studio. 
+	2. Open the **ServiceConfiguration.Cloud.cscfg** file located in the **PhluffyFotos** Cloud project.
+	3. Modify the **DataConnectionsString** and the Diagnostic Connection string (Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString) for the worker role to point to the storage account you've just created.
+	
+		> **Note:** The connection string used for accessing the windows azure storage account is built with the following format: `DefaultEndpointsProtocol=https;AccountName={yourservice};AccountKey={yourkey}`
+		> In it you'll need to replace `{yourservice}` with the storage account name and `{yourkey}` with the Primary Access Key copied.
 
-		> **Note:** The connection string used for accessing the windows azure storage account is built with the following format: `DefaultEndpointsProtocol=https;AccountName={YOUR-ACCONT};AccountKey={YOUR-ACCONT-KEY}`
-		> In it you'll need to replace `{YOUR-ACCONT}` with the storage account name and `{YOUR-ACCONT-KEY}` with the Primary Access Key copied.
-	1. Open the **Web.config** file located in the **PhluffyFotos.Web** project and update the **DataConnectionString** with the same value used in the step above.
-	1. Open the **Web.config** file located in the **PhluffyFotos.Web** project and update the **DefaultConnection** connction string to reflect the connection string to the Windows Azure SQL Database you created in step 1.
-	1. Save the changes made to the file.
+	4. Open the **Web.config** file located in the **PhluffyFotos.Web** project and update the **DataConnectionString** with the same value used in the step above.
+	5. Save the changes made to the file.
 
 4. Now create a SQL Azure database and update the **DataConnectionString** in **Web.config** from **PhluffyFotos.Web** project.
