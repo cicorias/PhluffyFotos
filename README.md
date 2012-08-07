@@ -41,4 +41,4 @@ The sample utilizes several technologies including [ASP.NET MVC 4](http://www.as
 5. Publish the **PhluffuPhotos.Web** project to the Windows Azure Web Site you created in Step 1.
 
 ### Detailed Instructions ###
-For a more detailed walk-through on how to perform each of the individual tasks required to get this sample working in Windows Azure, see the sample's [Getting Started document](https://github.com/WindowsAzure-Samples/PhluffyPhotos/blob/master/GettingStarted.md) in the repository containing the code for the sample. 
+For a more detailed walk-through on how to perform each of the individual tasks required to get this sample working in Windows Azure, see the sample's [Getting Started document](https://github.com/WindowsAzure-Samples/PhluffyFotos/blob/master/GettingStarted.md) in the repository containing the code for the sample. 
