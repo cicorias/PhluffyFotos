@@ -59,7 +59,7 @@
     <Folder Include="Profiles" />
   </ItemGroup>
   <ItemGroup>
-    <PublishProfile Include="Profiles\PhluffyCloudServiceProduction.azurePubxml" />
+    <PublishProfile Include="Profiles\PhluffyFotosCloudServiceProduction.azurePubxml" />
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>
